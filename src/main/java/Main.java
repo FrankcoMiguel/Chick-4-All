@@ -1,23 +1,12 @@
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
+package com.frankslab.chick4all;
 
-public class Main extends Application {
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-    @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/Layout/Splash.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 1080, 720));
-        primaryStage.initStyle(StageStyle.UNDECORATED);
-        primaryStage.show();
-
-    }
+@SpringBootApplication
+public class Chick4AllApplication {
 
     public static void main(String[] args) {
-        launch(args);
+        SpringApplication.run(Chick4AllApplication.class, args);
     }
 }
